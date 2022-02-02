@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tables de multiplications
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container">
+		<div class="row">
+			<h1>Tables de multiplications</h1>
+
+		</div>
+		<div class="row">
+			{% for table in tables %}
+				<div class="col text-center m-2" id="">
+					<a href="{{ path('game_show', {'id': table.id}) }}">{{ table.name }}</a>
+				</div>
+			{% endfor %}
+
+
+		</div>
+	</div>
+{% endblock %}

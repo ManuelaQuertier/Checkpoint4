@@ -17,14 +17,5 @@
         <li>Your template at <code><a href="{{ '/home/manuela/test js/try-js/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
     </ul>
 </div>
-<div class="container">
-<h1>1 X 1 = </h1><h2 id="res">1<h2>
-<div class="row">
-{% for item in table %}
-
-<div class="test col text-center m-2" id="nb_{{ item }}">{{ item }}</div>
-    
-{% endfor %}
-</div>
-</div>
+<a href="{{ path('game') }}">Tables de multiplications</a>
 {% endblock %}

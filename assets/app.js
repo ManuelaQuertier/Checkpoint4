@@ -13,22 +13,19 @@ import './bootstrap';
 
 var responses = document.getElementsByClassName('test');
 
-var res = document.getElementById('res').textContent;
-
-console.log(responses);
-
+var res = parseInt(document.getElementById('res').textContent,10);
 
 for (let response of responses) {
-    const test = response.textContent
-    if (test == res) {
+    const test = parseInt(response.textContent, 10)
+    if (test === res) {
         response.addEventListener('click', function () {
             response.className = "col text-center bg-success m-2";
-            console.log('coucou');
+            setTimeout(function(){location.reload();},600)
         })
     } else {
         response.addEventListener('click', function () {
             response.className = "col text-center bg-danger m-2";
-            console.log('pascoucou');
+            setTimeout(function(){location.reload();},600)
         })
     }
 }
