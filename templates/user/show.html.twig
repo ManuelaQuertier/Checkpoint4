@@ -6,13 +6,13 @@
 
 {% block body %}
 	{{ include( '/_navBar.html.twig') }}
-	<div class="container mt-5 default d-flex flex-column justify-content-around profil">
-		<div class="row mb-5">
+	<div class="container mt-5 default d-flex flex-column profil">
+		<div class="row my-5">
 			<h1 class="text-center">Page de 
 				{{ user.username }}
 				</h1>
 		</div>
-		<div class="row bg-primary rounded border border-secondary mb-3">
+		<div class="row bg-primary rounded border border-secondary my-5">
 			<div class="col-6 text-center">
 				<img class="userImg my-3" src="{{ user.image }}" alt="{{ user.username }}">
 			</div>
@@ -22,29 +22,25 @@
 				</a>
 			</div>
 		</div>
-		<div class="row bg-primary p-5 rounded border border-secondary mb-3">
+		<div class="row bg-primary p-5 rounded border border-secondary m-3">
 			<h2 class="mb-5 text-center">Tableau des Scores</h2>
 			<div class="col text-center">
-				<table>
+			<div class="table-responsive">
+				<table class="table">
 					<tbody>
 						<tr>
-							<td>Table de 1</td>
-							<td>10/10</td>
+							<th scope ="col">Table de 1</td>
+							<th scope ="col">Table de 2</td>
+							<th scoce ="col">Table de 3</td>
 						</tr>
                         <tr>
-							<td>Table de 2</td>
 							<td>10/10</td>
-						</tr>
-                        <tr>
-							<td>Table de 3</td>
 							<td>10/10</td>
-						</tr>
-                        <tr>
-							<td>Table de 4</td>
 							<td>10/10</td>
 						</tr>
 					</tbody>
 				</table>
+				</div>
 			</div>
 		</div>
 	</div>
