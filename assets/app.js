@@ -19,13 +19,12 @@ for (let response of responses) {
     const test = parseInt(response.textContent, 10)
     if (test === res) {
         response.addEventListener('click', function () {
-            response.className = "col text-center bg-success m-2";
+            response.className = "col-3 text-center bg-success m-2 btn btn-secondary py-4";
             setTimeout(function(){location.reload();},600)
         })
     } else {
         response.addEventListener('click', function () {
-            response.className = "col text-center bg-danger m-2";
-            setTimeout(function(){location.reload();},600)
+            response.className = "col-3 text-center bg-danger m-2 btn btn-secondary py-4";
         })
     }
 }

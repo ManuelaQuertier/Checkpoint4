@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,12 +11,14 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-         if ($this->getUser()) {
-           return $this->redirectToRoute('user_show',['id'=>'1']);
+        if ($this->getUser() && $this->IsGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute('admin');
+        } elseif ($this->getUser() && $this->IsGranted('ROLE_USER')) {
+            return $this->redirectToRoute('default');
         }
 
         // get the login error if there is one

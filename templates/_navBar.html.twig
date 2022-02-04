@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light">
+<div>
+	<a class="navbar-brand" href="{{ path('default') }}">
+		<img src="{{ asset('build/images/logoX.png') }}" width="50" height="50" alt="" class="mx-3">
+	</a>
+	{% if is_granted('ROLE_ADMIN') %}
+	<a href="{{ path('admin') }}" class="link-primary btn bg-secondary">
+		Retour au dashboard
+	</a>
+	{% else %}
+	<a href="{{ path('user_show', {'id': app.user.id}) }}" class="link-primary btn bg-secondary">
+		Voir ma page
+	</a>
+	{% endif %}
+  </div>
+	<h1 id="siteTitle">TABLES</h1>
+	<div>
+		<a href="{{ path('game') }}" class="link-primary btn bg-secondary mx-3">Jouer !</a>
+		<a href="{{ path('app_logout') }}" class="link-primary btn bg-secondary mx-3">Déconnexion</a>
+	</div>
+</nav>

@@ -3,14 +3,15 @@
 namespace App\Controller;
 
 use App\Entity\MultiplicationsTable;
-use App\Entity\Operation;
 use App\Repository\MultiplicationsTableRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
     /**
      * @Route("/game")
+     * @isGranted("ROLE_USER")
      */
 class GameController extends AbstractController
 {

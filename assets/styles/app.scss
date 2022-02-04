@@ -1,9 +1,75 @@
+$primary: rgb(14, 94, 94);
+$secondary: rgb(193, 209, 119);
+
+$theme-color: (
+    'primary': $primary,
+    'secondary': $secondary
+);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    background-color: rgb(159, 107, 175);
+    height: 100vh;
+    background-image: url("https://wallpaperaccess.com/full/762662.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.col{
-    background-color: white;
+.navbar {
+    background-color: rgb(14, 94, 94, .9);
 }
+
+.login {
+    margin-top: 15vh;
+    background-color: rgb(95, 158, 160, .8);
+    border-radius: 30px;
+    width: 65%;
+}
+
+.default {
+    background-color: rgb(95, 158, 160, .8);
+    height: 100vh;
+    margin-bottom: 80px;
+}
+
+.userImg{
+    max-width: 50%;
+    border-radius: 50%;
+}
+
+.card {
+    height: 290px !important;
+}
+
+.profil {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: $secondary;
+    text-shadow: -1px 0 $primary, 0 1px $primary,
+      1px 0 $primary, 0 -1px $primary;
+}
+
+#siteTitle {
+    font-size: 3rem !important;
+}
+
+.number {
+    background-color: $secondary;
+    border-radius: 50%;
+    font-size: 3rem !important;
+}
+
+.footer {
+    background-color: rgb(14, 94, 94, .9);
+    height: 80px;
+}  
+
+@media screen and (min-width: 1250px) {
+    .login {
+        width: 40%;
+    }
+ }
