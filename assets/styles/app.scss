@@ -1,5 +1,5 @@
-$primary: rgb(14, 94, 94);
-$secondary: rgb(193, 209, 119);
+$primary: #0e5e5e;
+$secondary: #c1d177;
 
 $theme-color: (
     'primary': $primary,
@@ -8,8 +8,14 @@ $theme-color: (
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
+html, body {
+    height: 100%;
+}
+
 body {
-    height: 100vh;
+    margin: 0;
+  display: flex;
+  flex-direction: column;
     background-image: url("https://wallpaperaccess.com/full/762662.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,12 +33,13 @@ body {
 }
 
 .default {
+    flex-grow: 1;
     background-color: rgb(95, 158, 160, .8);
     height: 100vh;
     margin-bottom: 80px;
 }
 
-.userImg{
+.userImg {
     max-width: 50%;
     border-radius: 50%;
 }
@@ -50,7 +57,7 @@ h1 {
     font-family: 'Fredoka One', cursive;
     color: $secondary;
     text-shadow: -1px 0 $primary, 0 1px $primary,
-      1px 0 $primary, 0 -1px $primary;
+        1px 0 $primary, 0 -1px $primary;
 }
 
 #siteTitle {
@@ -66,12 +73,10 @@ h1 {
 .footer {
     background-color: rgb(14, 94, 94, .9);
     height: 80px;
-}  
+}
 
 @media screen and (min-width: 1250px) {
     .login {
         width: 40%;
     }
- }
-
-
+}

@@ -20,7 +20,7 @@ class GameController extends AbstractController
      */
     public function index(MultiplicationsTableRepository $multiplicationsTableRepository): Response
     {
-        return $this->render('game/index.html.twig', [
+        return $this->render('game/multiplications.html.twig', [
             'tables' => $multiplicationsTableRepository->findAll()
         ]);
     }
